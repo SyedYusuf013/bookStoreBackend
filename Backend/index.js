@@ -21,6 +21,10 @@ connectToMongoDB();
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
+app.get("/", (req, res) => {
+  res.send("We are live now from Book Store Web App!!")
+})
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
